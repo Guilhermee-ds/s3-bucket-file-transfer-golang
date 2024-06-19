@@ -23,10 +23,10 @@ var (
 func init() {
 	sess, err := session.NewSession(&aws.Config{
 		Credentials: credentials.NewStaticCredentials(
-			"test", "test", ""), // LocalStack default credentials
+			"test", "test", ""),
 		Region:           aws.String("us-east-1"),
-		Endpoint:         aws.String("http://localhost:4566"), // LocalStack endpoint
-		S3ForcePathStyle: aws.Bool(true),                      // Needed for LocalStack
+		Endpoint:         aws.String("http://localhost:4566"),
+		S3ForcePathStyle: aws.Bool(true),
 	})
 
 	if err != nil {
